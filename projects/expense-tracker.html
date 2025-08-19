@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>C++ Expense Tracker</title>
+  <style>
+    body { font-family: monospace; background: #f9fbff; padding: 20px; }
+    pre { background: #1a2a6c; color: white; padding: 20px; border-radius: 10px; overflow-x: auto; }
+    a { display: inline-block; margin-bottom: 15px; color: #1a2a6c; text-decoration: none; font-weight: bold; }
+  </style>
+</head>
+<body>
+  <a href="../index.html">⬅ Back</a>
+  <h1>Expense Tracker</h1>
+  <pre><code>
+#include &lt;iostream&gt;
+#include &lt;fstream&gt;
+#include &lt;string&gt;
+using namespace std;
+
+int main() {
+    ofstream file("expenses.txt", ios::app);
+    string category;
+    double amount;
+    
+    cout &lt;&lt; "Enter category: ";
+    cin &gt;&gt; category;
+    cout &lt;&lt; "Enter amount: ";
+    cin &gt;&gt; amount;
+
+    file &lt;&lt; category &lt;&lt; " " &lt;&lt; amount &lt;&lt; endl;
+    file.close();
+    
+    cout &lt;&lt; "Expense saved!" &lt;&lt; endl;
+    return 0;
+}
+  </code></pre>
+</body>
+</html>
