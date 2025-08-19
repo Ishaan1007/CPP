@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head><meta charset="UTF-8"><title>Bank Account Simulator</title><style>body{font-family:monospace;background:#f9fbff;padding:20px;}pre{background:#1a2a6c;color:white;padding:20px;border-radius:10px;overflow-x:auto;}</style></head>
+<body>
+<a href="../index.html">⬅ Back</a>
+<h1>Bank Account Simulator</h1>
+<pre><code>
+#include &lt;iostream&gt;
+using namespace std;
+
+class Bank {
+    double balance;
+public:
+    Bank() { balance=0; }
+    void deposit(double amt){ balance+=amt; }
+    void withdraw(double amt){ if(amt&lt;=balance) balance-=amt; else cout &lt;&lt; "Insufficient funds\n"; }
+    void show(){ cout &lt;&lt; "Balance: " &lt;&lt; balance &lt;&lt; endl; }
+};
+
+int main(){
+    Bank acc;
+    acc.deposit(1000);
+    acc.withdraw(300);
+    acc.show();
+    return 0;
+}
+</code></pre>
+</body>
+</html>
