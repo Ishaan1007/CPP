@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>C++ Report Card</title>
+  <style>
+    body { font-family: monospace; background: #f9fbff; padding: 20px; }
+    pre { background: #1a2a6c; color: white; padding: 20px; border-radius: 10px; overflow-x: auto; }
+    a { color: #1a2a6c; text-decoration: none; font-weight: bold; }
+  </style>
+</head>
+<body>
+  <a href="../index.html">⬅ Back</a>
+  <h1>Student Report Card</h1>
+  <pre><code>
+#include &lt;iostream&gt;
+using namespace std;
+
+int main() {
+    string name;
+    int marks[5];
+    int total = 0;
+    
+    cout &lt;&lt; "Enter student name: ";
+    cin &gt;&gt; name;
+    
+    for(int i=0; i&lt;5; i++) {
+        cout &lt;&lt; "Enter marks in subject " &lt;&lt; i+1 &lt;&lt; ": ";
+        cin &gt;&gt; marks[i];
+        total += marks[i];
+    }
+    
+    float percentage = total / 5.0;
+    cout &lt;&lt; "Name: " &lt;&lt; name &lt;&lt; "\nPercentage: " &lt;&lt; percentage &lt;&lt; "%" &lt;&lt; endl;
+    
+    if (percentage &gt;= 90) cout &lt;&lt; "Grade: A+" &lt;&lt; endl;
+    else if (percentage &gt;= 75) cout &lt;&lt; "Grade: A" &lt;&lt; endl;
+    else if (percentage &gt;= 60) cout &lt;&lt; "Grade: B" &lt;&lt; endl;
+    else cout &lt;&lt; "Grade: C" &lt;&lt; endl;
+
+    return 0;
+}
+  </code></pre>
+</body>
+</html>
