@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head><meta charset="UTF-8"><title>Quiz Game</title><style>body{font-family:monospace;background:#f9fbff;padding:20px;}pre{background:#1a2a6c;color:white;padding:20px;border-radius:10px;overflow-x:auto;}</style></head>
+<body>
+<a href="../index.html">⬅ Back</a>
+<h1>Quiz Game</h1>
+<pre><code>
+#include &lt;iostream&gt;
+using namespace std;
+
+int main() {
+    string q = "What is the size of int in C++?";
+    string options[] = {"2", "4", "8"};
+    int answer = 1, choice;
+
+    cout &lt;&lt; q &lt;&lt; endl;
+    for(int i=0;i&lt;3;i++) cout &lt;&lt; i+1 &lt;&lt; ". " &lt;&lt; options[i] &lt;&lt; endl;
+    
+    cout &lt;&lt; "Your choice: ";
+    cin &gt;&gt; choice;
+    if(choice-1 == answer) cout &lt;&lt; "Correct!" &lt;&lt; endl;
+    else cout &lt;&lt; "Wrong!" &lt;&lt; endl;
+    return 0;
+}
+</code></pre>
+</body>
+</html>
