@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Library Management</title>
+  <style> body { font-family: monospace; background: #f9fbff; padding: 20px; } pre { background: #1a2a6c; color: white; padding: 20px; border-radius: 10px; overflow-x: auto; } </style>
+</head>
+<body>
+  <a href="../index.html">⬅ Back</a>
+  <h1>Library Management</h1>
+  <pre><code>
+#include &lt;iostream&gt;
+#include &lt;map&gt;
+using namespace std;
+
+int main() {
+    map&lt;string,bool&gt; library;
+    library["C++ Primer"] = true;
+    library["DSA Book"] = true;
+
+    string book;
+    cout &lt;&lt; "Enter book to issue: ";
+    getline(cin, book);
+
+    if(library[book]) {
+        cout &lt;&lt; "Book issued!" &lt;&lt; endl;
+        library[book] = false;
+    } else {
+        cout &lt;&lt; "Not available" &lt;&lt; endl;
+    }
+    return 0;
+}
+  </code></pre>
+</body>
+</html>
