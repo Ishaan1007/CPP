@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>C++ To-Do List</title>
+  <style> body { font-family: monospace; background: #f9fbff; padding: 20px; } pre { background: #1a2a6c; color: white; padding: 20px; border-radius: 10px; overflow-x: auto; } </style>
+</head>
+<body>
+  <a href="../index.html">⬅ Back</a>
+  <h1>To-Do List</h1>
+  <pre><code>
+#include &lt;iostream&gt;
+#include &lt;fstream&gt;
+#include &lt;vector&gt;
+using namespace std;
+
+int main() {
+    ofstream file("todo.txt", ios::app);
+    string task;
+    cout &lt;&lt; "Enter task: ";
+    getline(cin, task);
+    file &lt;&lt; task &lt;&lt; endl;
+    file.close();
+    cout &lt;&lt; "Task added!" &lt;&lt; endl;
+    return 0;
+}
+  </code></pre>
+</body>
+</html>
