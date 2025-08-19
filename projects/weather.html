@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head><meta charset="UTF-8"><title>Weather Data Analyzer</title><style>body{font-family:monospace;background:#f9fbff;padding:20px;}pre{background:#1a2a6c;color:white;padding:20px;border-radius:10px;overflow-x:auto;}</style></head>
+<body>
+<a href="../index.html">⬅ Back</a>
+<h1>Weather Data Analyzer</h1>
+<pre><code>
+#include &lt;iostream&gt;
+#include &lt;vector&gt;
+using namespace std;
+
+int main() {
+    vector&lt;int&gt; temps = {30, 32, 35, 28, 31};
+    int sum=0, max=temps[0], min=temps[0];
+    for(int t:temps) {
+        sum+=t;
+        if(t&gt;max) max=t;
+        if(t&lt;min) min=t;
+    }
+    cout &lt;&lt; "Avg: " &lt;&lt; sum/temps.size() &lt;&lt; endl;
+    cout &lt;&lt; "Max: " &lt;&lt; max &lt;&lt; " Min: " &lt;&lt; min &lt;&lt; endl;
+    return 0;
+}
+</code></pre>
+</body>
+</html>
